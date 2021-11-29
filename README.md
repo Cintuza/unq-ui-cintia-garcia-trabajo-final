@@ -68,3 +68,47 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+instalar bootstrap 
+https://getbootstrap.com/docs/5.1/getting-started/download/
+npm install bootstrap
+
+
+
+Ficha {
+CodigoDeImagen : 12
+Frente : imagen
+Back : naranja
+}
+
+Onclick {
+If (ficha1 == null) {
+setFicha1(ficha)
+} else {
+setFicha2(ficha)
+}
+ChequearIgualdad
+}
+
+UseEffect(() => {
+Hide back(ficha1)
+Show frente(ficha1)
+}, [ficha1]
+)
+
+ChequearIgualdad {
+If (ficha1.codigoDeImagen == ficha2.codigoDeImagen) { mensaje acertaste
+Marcar punto
+} else { mensaje intentalo de nuevo
+Hide frente
+Show back
+}
+}
+
+If (!fichaOculta) {
+return imagen ficha oculta
+} else {
+return ficha.frente
+}
