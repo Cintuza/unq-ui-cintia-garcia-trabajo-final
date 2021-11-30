@@ -5,6 +5,10 @@ import simone from './components/Fichas/simone.jpeg'
 import diana from './components/Fichas/diana.jpeg'
 import lohana from './components/Fichas/lohana.jpg'
 import jauregui from './components/Fichas/jauregui.png'
+import dora from './components/Fichas/dora.jpeg'
+import emma from './components/Fichas/emma.jpg'
+import flora from './components/Fichas/flora.jpeg'
+import pasionaria from './components/Fichas/pasionaria.jpeg'
 
 const App = () => {
 
@@ -27,11 +31,27 @@ const ficha3 = {
     codigo : "jauregui",
     imagen : jauregui
 }
+const ficha4 = {
+    codigo : "flora",
+    imagen : flora
+}
+const ficha5 = {
+    codigo : "emma",
+    imagen : emma
+}
+const ficha6 = {
+    codigo : "dora",
+    imagen : dora
+}
+const ficha7 = {
+    codigo : "pasionaria",
+    imagen : pasionaria
+}
 
 const funcion = (a, b) => {  
   return 0.5 - Math.random();
 }
-const fichasTablero4x4SinOrdenar = [ficha0, ficha1, ficha2, ficha3]
+const fichasTablero4x4SinOrdenar = [ficha0, ficha1, ficha2, ficha3, ficha4, ficha5, ficha6, ficha7]
 const fichasTablero4x4 = fichasTablero4x4SinOrdenar.sort(funcion)
 
 
@@ -46,11 +66,26 @@ const fichasTablero4x4 = fichasTablero4x4SinOrdenar.sort(funcion)
 
 
 
-  <div class="row align-items-start  p-0 m-0">
-    {fichasTablero4x4.map( ficha => <div className="col-auto p-1 m-0">
+  <div class="row p-0 m-0">
+    {fichasTablero4x4.slice(0,5).map( ficha => <div className="col-2 text-center border p-2 m-0">
         <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
         </div>)}
   </div>
+  <div class="row align-items-start  p-0 m-0">
+    {fichasTablero4x4.slice(4,8).map( ficha => <div className="col-auto p-1 m-0">
+        <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
+        </div>)}
+  </div>
+  {/* <div class="row align-items-start  p-0 m-0">
+    {fichasTablero4x4.slice(0,4).map( ficha => <div className="col-auto p-1 m-0">
+        <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
+        </div>)}
+  </div>
+  <div class="row align-items-start  p-0 m-0">
+    {fichasTablero4x4.slice(0,4).map( ficha => <div className="col-auto p-1 m-0">
+        <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
+        </div>)}
+  </div> */}
 
 {/* 
       <div className="row">
