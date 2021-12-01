@@ -75,6 +75,8 @@ instalar bootstrap
 https://getbootstrap.com/docs/5.1/getting-started/download/
 npm install bootstrap
 
+instalar react router dom 6
+npm add react-router-dom@6
 
 
 Ficha {

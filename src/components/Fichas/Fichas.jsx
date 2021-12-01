@@ -1,7 +1,12 @@
+import React from 'react'
 import simone from './simone.jpeg'
 import diana from './diana.jpeg'
 import lohana from './lohana.jpg'
 import jauregui from './jauregui.png'
+import dora from './dora.jpeg'
+import emma from './emma.jpg'
+import flora from './flora.jpeg'
+import pasionaria from './pasionaria.jpeg'
 
 const Fichas = () => {
     
@@ -21,13 +26,39 @@ const Fichas = () => {
         codigo : "jauregui",
         imagen : jauregui
     }
+    const ficha4 = {
+        codigo : "flora",
+        imagen : flora
+    }
+    const ficha5 = {
+        codigo : "emma",
+        imagen : emma
+    }
+    const ficha6 = {
+        codigo : "dora",
+        imagen : dora
+    }
+    const ficha7 = {
+        codigo : "pasionaria",
+        imagen : pasionaria
+    }
 
-    const fichasTablero4x4SinOrdenar = [ficha0]
-    const fichasTablero4x4 = fichasTablero4x4SinOrdenar.sort(funcion)
+    const fichasTablero4x4SinOrdenar = [ficha0, ficha1, ficha2, ficha3, ficha4, ficha5, ficha6, ficha7]
+    const fichasTablero4x4 = () => {
+        return fichasTablero4x4SinOrdenar.sort(funcion)
+    }
 
     const funcion = (a, b) => {  
         return 0.5 - Math.random();
       }  
 }
+
+const memContextType = {
+    fichasTablero4x4 : [],
+    setFichasTablero4x4 : () => {},
+}
+
+const ContextoMem = React.createContext(memContextType);
+
 
 export default Fichas;

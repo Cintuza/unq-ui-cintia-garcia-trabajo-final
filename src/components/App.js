@@ -1,20 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Fichas from './components/Fichas/Fichas.jsx'
-import simone from './components/Fichas/simone.jpeg'
-import diana from './components/Fichas/diana.jpeg'
-import lohana from './components/Fichas/lohana.jpg'
-import jauregui from './components/Fichas/jauregui.png'
-import dora from './components/Fichas/dora.jpeg'
-import emma from './components/Fichas/emma.jpg'
-import flora from './components/Fichas/flora.jpeg'
-import pasionaria from './components/Fichas/pasionaria.jpeg'
+import logo from '../logo.svg';
+import Fichas from './Fichas/Fichas.jsx'
+import Ficha from './Ficha.jsx'
+import simone from './Fichas/simone.jpeg'
+import diana from './Fichas/diana.jpeg'
+import lohana from './Fichas/lohana.jpg'
+import jauregui from './Fichas/jauregui.png'
+import dora from './Fichas/dora.jpeg'
+import emma from './Fichas/emma.jpg'
+import flora from './Fichas/flora.jpeg'
+import pasionaria from './Fichas/pasionaria.jpeg'
 
 const App = () => {
 
-  const fichas = [logo, logo, logo, logo, logo, logo, logo];
-
-  
   const ficha0 = {
     codigo : "simone",
     imagen : simone
@@ -67,14 +64,10 @@ const fichasTablero4x4 = fichasTablero4x4SinOrdenar.sort(funcion)
 
 
   <div class="row p-0 m-0">
-    {fichasTablero4x4.slice(0,5).map( ficha => <div className="col-2 text-center border p-2 m-0">
-        <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
-        </div>)}
+    {fichasTablero4x4.slice(0,5).map( ficha => Ficha(ficha))}
   </div>
   <div class="row align-items-start  p-0 m-0">
-    {fichasTablero4x4.slice(4,8).map( ficha => <div className="col-auto p-1 m-0">
-        <img src={ficha.imagen} className="img-fluid p-0 m-0" width="160" alt="..."></img>
-        </div>)}
+    {fichasTablero4x4.slice(4,8).map( ficha => Ficha(ficha))}
   </div>
   {/* <div class="row align-items-start  p-0 m-0">
     {fichasTablero4x4.slice(0,4).map( ficha => <div className="col-auto p-1 m-0">
