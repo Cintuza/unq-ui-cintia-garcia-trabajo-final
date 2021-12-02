@@ -1,4 +1,3 @@
-import React from 'react'
 import simone from './simone.jpeg'
 import diana from './diana.jpeg'
 import lohana from './lohana.jpg'
@@ -50,15 +49,10 @@ const Fichas = () => {
 
     const funcion = (a, b) => {  
         return 0.5 - Math.random();
-      }  
-}
+      }
 
-const memContextType = {
-    fichasTablero4x4 : [],
-    setFichasTablero4x4 : () => {},
+    return (fichasTablero4x4);
 }
-
-const ContextoMem = React.createContext(memContextType);
 
 
 export default Fichas;
