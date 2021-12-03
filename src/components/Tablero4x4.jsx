@@ -16,22 +16,22 @@ const Tablero4x4 = () => {
         }
     }, [memotest.ficha2]
     )
-/* 
+
     useEffect (() => {
         if (memotest.ficha1 !== null & (memotest.ficha2 !== null))   {
             memotest.ficha1.estaOculta = true;
             memotest.ficha2.estaOculta = true;
         }
     }, [darVuelta]
-    ) */
+    )
   
     const chequearIgualdad = () => {
       if (memotest.ficha1.codigo === memotest.ficha2.codigo) { 
           console.log("Acertaste!")
       } else {
           console.log("Intentalo de nuevo!");
-          //memotest.setEstaCargando(!memotest.estaCargando);
-          setDarVuelta(true);
+          //memotest.setEstaCargando(true);
+          setDarVuelta(!darVuelta);
       }
       /* mensaje acertaste
       Marcar punto
@@ -42,10 +42,10 @@ const Tablero4x4 = () => {
       } */
     }
     
-    const handleSubmit = event => {
+    /* const handleSubmit = event => {
         memotest.ficha1.estaOculta = true;
         memotest.ficha2.estaOculta = true;
-    }
+    } */
 
     return (
         <div className="container">

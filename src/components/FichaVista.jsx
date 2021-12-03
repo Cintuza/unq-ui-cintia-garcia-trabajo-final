@@ -26,7 +26,6 @@ const FichaVista = (ficha) => {
             console.log("Ya elegiste dos fichas")
             console.log(memotest.ficha1.estaOculta);
             console.log(memotest.ficha2.estaOculta);
-            memotest.ficha1.estaOculta = true;
         }
         console.log(ficha);
         console.log(memotest.ficha1);
