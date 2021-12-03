@@ -10,34 +10,42 @@ import pasionaria from './pasionaria.jpeg'
 const Fichas = () => {
     
     const ficha0 = {
+        estaOculta : true,
         codigo : "simone",
         imagen : simone
     }
     const ficha1 = {
+        estaOculta : true,
         codigo : "diana",
         imagen : diana
     }
     const ficha2 = {
+        estaOculta : true,
         codigo : "lohana",
         imagen : lohana
     }
     const ficha3 = {
+        estaOculta : true,
         codigo : "jauregui",
         imagen : jauregui
     }
     const ficha4 = {
+        estaOculta : true,
         codigo : "flora",
         imagen : flora
     }
     const ficha5 = {
+        estaOculta : true,
         codigo : "emma",
         imagen : emma
     }
     const ficha6 = {
+        estaOculta : true,
         codigo : "dora",
         imagen : dora
     }
     const ficha7 = {
+        estaOculta : true,
         codigo : "pasionaria",
         imagen : pasionaria
     }
