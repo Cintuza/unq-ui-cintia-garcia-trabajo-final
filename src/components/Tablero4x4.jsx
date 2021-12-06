@@ -11,6 +11,7 @@ const Tablero4x4 = () => {
 
     useEffect (() => {
         if (memotest.ficha1 !== null & (memotest.ficha2 !== null))   {
+            memotest.setEnabledButton(true);
             chequearIgualdad();
             //memotest.setEstaCargando(false)
         }
@@ -22,6 +23,7 @@ const Tablero4x4 = () => {
             memotest.ficha1.estaOculta = true;
             memotest.ficha2.estaOculta = true;
         }
+        console.log(memotest.ficha2);
     }, [darVuelta]
     )
   
@@ -31,8 +33,15 @@ const Tablero4x4 = () => {
       } else {
           console.log("Intentalo de nuevo!");
           //memotest.setEstaCargando(true);
-          setDarVuelta(!darVuelta);
+          setDarVuelta(true);
       }
+      setTimeout(() => {
+          memotest.setFicha1(null);
+          memotest.setFicha2(null);
+          setDarVuelta(false);
+          memotest.setEnabledButton(false);
+      }, 2000
+      );
       /* mensaje acertaste
       Marcar punto
       } else { 
@@ -41,11 +50,6 @@ const Tablero4x4 = () => {
       Show back
       } */
     }
-    
-    /* const handleSubmit = event => {
-        memotest.ficha1.estaOculta = true;
-        memotest.ficha2.estaOculta = true;
-    } */
 
     return (
         <div className="container">
@@ -61,6 +65,12 @@ const Tablero4x4 = () => {
             </div>
             <div class="row align-items-start  p-0 m-0">
                 {fichasTablero4x4.slice(4,8).map( ficha => FichaVista(ficha))}
+            </div>
+            <div class="row align-items-start  p-0 m-0">
+                {fichasTablero4x4.slice(8,12).map( ficha => FichaVista(ficha))}
+            </div>
+            <div class="row align-items-start  p-0 m-0">
+                {fichasTablero4x4.slice(12,16).map( ficha => FichaVista(ficha))}
             </div>
         </div>
     )
