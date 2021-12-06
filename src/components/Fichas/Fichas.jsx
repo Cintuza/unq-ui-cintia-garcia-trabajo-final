@@ -107,7 +107,7 @@ const Fichas = () => {
 
     const funcion = (a, b) => {  
         return 0.5 - Math.random();
-      }
+    }
 
     return (fichasTablero4x4);
 }
