@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import back from './Fichas/back.png';
-import { UsarMem } from './ContextoMemotest.jsx';
+import { UsarMem } from '../ContextoMemotest.jsx';
 
 const FichaVista = (ficha) => {
 
@@ -13,8 +12,6 @@ const FichaVista = (ficha) => {
         } else if (memotest.ficha1 !== null & (memotest.ficha2 === null)) {
             ficha.estaOculta = false;
             memotest.setFicha2(ficha);
-        } else {
-            console.log("Ya elegiste dos fichas");
         }
     }
 

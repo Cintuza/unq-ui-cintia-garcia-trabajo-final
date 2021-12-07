@@ -15,6 +15,8 @@ const memContextType = {
     setEnabledButton : () => {},
     puntaje : 0,
     setPuntaje : () => {},
+    partidaGanada : false, 
+    setPartidaGanada : () => {},
   }
   
 const ContextoMem = React.createContext(memContextType);
@@ -26,8 +28,11 @@ export const ProveedorMem = ({children}) => {
     const [estaCargando, setEstaCargando] = useState({});
     const [enabledButton, setEnabledButton] = useState (false);
     const [puntaje, setPuntaje] = useState (0);
+    const [partidaGanada, setPartidaGanada] = useState(false);
   
-    const value = {fichasTablero4x4, setFichasTablero4x4, ficha1, setFicha1, ficha2, setFicha2, estaCargando, setEstaCargando, enabledButton, setEnabledButton, puntaje, setPuntaje};
+    const value = {fichasTablero4x4, setFichasTablero4x4, ficha1, setFicha1, ficha2, 
+        setFicha2, estaCargando, setEstaCargando, enabledButton, setEnabledButton, 
+        puntaje, setPuntaje, partidaGanada, setPartidaGanada};
   
     return <ContextoMem.Provider value={value}>{children}</ContextoMem.Provider>
 }
