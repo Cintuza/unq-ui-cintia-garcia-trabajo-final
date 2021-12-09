@@ -63,7 +63,7 @@ const Tablero = () => {
     return (
         <>
         <div className="container-fluid mt-2">
-            <div className="row align-items-center">
+            <div className="row align-items-center justify-content-center">
                 <div className="col-md-5 ms-md-3 me-md-3">
                     { (memotest.tamanioTablero == '4x4') ? (
                         <Tablero4x4/>

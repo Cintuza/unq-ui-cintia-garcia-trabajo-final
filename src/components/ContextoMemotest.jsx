@@ -9,8 +9,6 @@ const memContextType = {
     setFicha1 : () => {},
     ficha2 : null,
     setFicha2 : () => {},
-    estaCargando : false,
-    setEstaCargando : () => {},
     enabledButton : false,
     setEnabledButton : () => {},
     puntaje : 0,
@@ -30,7 +28,6 @@ export const ProveedorMem = ({children}) => {
     const [fichasTablero, setFichasTablero] = useState([]);
     const [ficha1, setFicha1] = useState(null);
     const [ficha2, setFicha2] = useState(null);
-    const [estaCargando, setEstaCargando] = useState({});
     const [enabledButton, setEnabledButton] = useState (false);
     const [puntaje, setPuntaje] = useState (0);
     const [partidaGanada, setPartidaGanada] = useState(false);
@@ -56,9 +53,9 @@ export const ProveedorMem = ({children}) => {
     }
 
     const value = {fichasTablero, setFichasTablero, ficha1, setFicha1, ficha2, 
-        setFicha2, estaCargando, setEstaCargando, enabledButton, setEnabledButton, 
-        puntaje, setPuntaje, partidaGanada, setPartidaGanada, tamanioTablero, 
-        setTamanioTablero, fichasTablero4x4, fichasTablero5x5, fichasTablero8x8}
+        setFicha2, enabledButton, setEnabledButton, puntaje, setPuntaje,
+        partidaGanada, setPartidaGanada, tamanioTablero, setTamanioTablero, 
+        fichasTablero4x4, fichasTablero5x5, fichasTablero8x8}
   
     return <ContextoMem.Provider value={value}>{children}</ContextoMem.Provider>
 }

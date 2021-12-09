@@ -4,7 +4,7 @@ const Puntaje = () => {
     const memotest = UsarMem();
 
     return (
-        <div className="row border rounded border-success border-3 justify-content-center me-md-3">
+        <div className="row border rounded border-success border-3 justify-content-center">
             <p className="pt-2 text-success">
                 Puntaje: {memotest.puntaje}
             </p>

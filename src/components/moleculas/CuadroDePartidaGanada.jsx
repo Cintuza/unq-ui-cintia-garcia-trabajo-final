@@ -13,7 +13,7 @@ const CuadroDePartidaGanada = () => {
     }
 
     return (
-        <div className="alert alert-success me-md-3" role="alert">
+        <div className="alert alert-success mt-3" role="alert">
             <div className="row justify-content-center pb-2">
                 ¡Ganaste!
             </div>
