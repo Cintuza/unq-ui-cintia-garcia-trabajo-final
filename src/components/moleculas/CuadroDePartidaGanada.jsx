@@ -1,9 +1,15 @@
+import { UsarMem } from '../ContextoMemotest.jsx';
+import { useNavigate } from 'react-router-dom';
+
 const CuadroDePartidaGanada = () => {
+    const memotest = UsarMem();
+    const navigate = useNavigate();
 
     const onClick = () => {
-        memotest.setFichasTablero4x4(Fichas());
         memotest.setPuntaje(0);
         memotest.setPartidaGanada(false);
+        memotest.setFichasTablero([]);
+        navigate('/');
     }
 
     return (

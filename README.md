@@ -9,6 +9,8 @@ Para poder jugar, debés tener instalado React. Acá podés leer la documentaci�
 También debés instalar Bootstrap; acá encontrarás las instrucciones:
 [https://getbootstrap.com/docs/5.1/getting-started/download/](https://getbootstrap.com/docs/5.1/getting-started/download/)
 
+Por último, debés agregar la última versión de React Router con este comando en tu consola y desde el directorio donde clonaste el repositorio:
+### `npm add react-router-dom@6`
 
 Luego sólo debés correr el siguiente comando en tu consola, desde el directorio donde clonaste el repositorio:
 ### `npm start`
@@ -16,10 +18,4 @@ Luego sólo debés correr el siguiente comando en tu consola, desde el directori
 Verás el juego desde tu navegador en [http://localhost:3000](http://localhost:3000).
 
 ¡A jugar!
-
-
-
-instalar react router dom 6
-npm add react-router-dom@6
-
 

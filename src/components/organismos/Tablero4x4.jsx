@@ -1,5 +1,5 @@
 import FichaVista from './FichaVista.jsx'
-import { UsarMem } from './ContextoMemotest.jsx';
+import { UsarMem } from '../ContextoMemotest.jsx';
 
 const Tablero4x4 = () => {
     const memotest = UsarMem();
@@ -7,16 +7,16 @@ const Tablero4x4 = () => {
     return (
         <>
         <div className="row justify-content-center p-0 m-0">
-            {memotest.fichasTablero4x4.slice(0,4).map( ficha => FichaVista(ficha))}
+            {memotest.fichasTablero.slice(0,4).map( ficha => FichaVista(ficha))}
         </div>
         <div className="row justify-content-center p-0 m-0">
-            {memotest.fichasTablero4x4.slice(4,8).map( ficha => FichaVista(ficha))}
+            {memotest.fichasTablero.slice(4,8).map( ficha => FichaVista(ficha))}
         </div>
         <div className="row justify-content-center p-0 m-0">
-            {memotest.fichasTablero4x4.slice(8,12).map( ficha => FichaVista(ficha))}
+            {memotest.fichasTablero.slice(8,12).map( ficha => FichaVista(ficha))}
         </div>
         <div className="row justify-content-center p-0 m-0">
-            {memotest.fichasTablero4x4.slice(12,16).map( ficha => FichaVista(ficha))}
+            {memotest.fichasTablero.slice(12,16).map( ficha => FichaVista(ficha))}
         </div>
         </>
     )
