@@ -1,16 +1,6 @@
-import { UsarMem } from '../ContextoMemotest.jsx';
-import { useNavigate } from 'react-router-dom';
+import BotonNuevaPartida from '../atomos/BotonNuevaPartida.jsx';
 
 const CuadroDePartidaGanada = () => {
-    const memotest = UsarMem();
-    const navigate = useNavigate();
-
-    const onClick = () => {
-        memotest.setPuntaje(0);
-        memotest.setPartidaGanada(false);
-        memotest.setFichasTablero([]);
-        navigate('/');
-    }
 
     return (
         <div className="alert alert-success mt-3" role="alert">
@@ -18,7 +8,7 @@ const CuadroDePartidaGanada = () => {
                 ¡Ganaste!
             </div>
             <div className="row">
-                <button type="button" class="btn btn-success" onClick={onClick}>Nueva partida</button>
+                <BotonNuevaPartida/>
             </div>
         </div>
     )

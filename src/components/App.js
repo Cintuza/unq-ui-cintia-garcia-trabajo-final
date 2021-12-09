@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ProveedorMem, UsarMem } from './ContextoMemotest.jsx';
 import Layout from './plantillas/Layout.jsx';
 import Tablero from './plantillas/Tablero.jsx';
@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
           <Route element={ <Layout/> } >
             <Route path="/" element={ <NuevaPartida/> } />
-            <Route path="/tablero" element={ <Tablero/> } />
+            <Route path="/tablero" element={ <RequiereTamanioTablero> <Tablero/> </RequiereTamanioTablero> } />
             <Route path="*" element={ <NuevaPartida/> } />
           </Route>
         </Routes>

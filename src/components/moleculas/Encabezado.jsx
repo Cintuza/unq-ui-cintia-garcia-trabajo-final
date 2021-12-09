@@ -1,3 +1,4 @@
+import BotonNuevaPartida from '../atomos/BotonNuevaPartida';
 import back from '../Fichas/back.png';
 
 const Encabezado = () => {
@@ -9,6 +10,11 @@ const Encabezado = () => {
                     <img src={back} alt="" width="35" height="35" className="d-inline-block align-text-top me-3"/>
                     Memotest
                 </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <BotonNuevaPartida/>
+                    </li>
+                </ul>
             </div>
         </nav>
     )
